@@ -1,4 +1,4 @@
-import { INCREMENT } from "./counterTypes";
+import { DECREMENT, INCREMENT } from "./counterTypes";
 
 const initialState={
     count:0
@@ -9,6 +9,10 @@ const counterReducer=(state=initialState,action)=>{
         case INCREMENT:
             return{
                 count:state.count+1
+            }
+            case DECREMENT:
+            return{
+                count:state.count-1
             }
         default:
             return state
